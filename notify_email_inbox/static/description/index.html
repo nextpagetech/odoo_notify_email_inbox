@@ -1,191 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User Notifications by Email and Odoo</title>
+<div class="npt-notify-email-inbox">
     <style>
-        body {
-            margin: 0;
+        .npt-notify-email-inbox {
             color: #1f2933;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            background: #ffffff;
         }
-        .npt-page {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 32px 20px 48px;
-        }
-        .npt-header {
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 24px;
-            margin-bottom: 28px;
-        }
-        .npt-kicker {
-            margin: 0 0 8px;
+        .npt-notify-email-inbox .npt-kicker {
             color: #6b7280;
             font-size: 13px;
             font-weight: 700;
             letter-spacing: .04em;
             text-transform: uppercase;
         }
-        h1 {
-            margin: 0 0 12px;
+        .npt-notify-email-inbox .npt-title {
             color: #111827;
             font-size: 34px;
             line-height: 1.2;
         }
-        h2 {
-            margin: 32px 0 12px;
+        .npt-notify-email-inbox .npt-section-title {
             color: #111827;
             font-size: 22px;
             line-height: 1.3;
         }
-        p {
-            margin: 0 0 14px;
-        }
-        ul, ol {
-            margin: 0;
-            padding-left: 22px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .npt-lead {
-            max-width: 760px;
-            color: #374151;
-            font-size: 17px;
-        }
-        .npt-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-            margin-top: 16px;
-        }
-        .npt-box {
+        .npt-notify-email-inbox .npt-feature-card {
+            background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 8px;
+            height: 100%;
             padding: 18px;
-            background: #f9fafb;
         }
-        .npt-box strong {
+        .npt-notify-email-inbox .npt-feature-card strong {
+            color: #111827;
             display: block;
             margin-bottom: 6px;
-            color: #111827;
         }
-        .npt-note {
-            border-left: 4px solid #6b7280;
-            padding: 12px 16px;
+        .npt-notify-email-inbox .npt-note {
             background: #f9fafb;
+            border-left: 4px solid #6b7280;
             color: #374151;
+            padding: 12px 16px;
         }
-        .npt-publisher {
+        .npt-notify-email-inbox .npt-publisher {
             border-top: 1px solid #e5e7eb;
-            margin-top: 34px;
-            padding-top: 22px;
         }
-        a {
+        .npt-notify-email-inbox a {
             color: #0f766e;
             text-decoration: none;
         }
-        a:hover {
+        .npt-notify-email-inbox a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 700px) {
-            .npt-page {
-                padding: 24px 16px 40px;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            .npt-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
-</head>
-<body>
-    <main class="npt-page">
-        <header class="npt-header">
-            <p class="npt-kicker">Odoo Discuss</p>
-            <h1>User Notifications by Email and Odoo</h1>
-            <p class="npt-lead">
-                Adds a user notification preference that delivers notifications through both email and the Odoo inbox.
-            </p>
-        </header>
 
-        <section>
-            <h2>Overview</h2>
-            <p>
-                This module extends Odoo Mail notification preferences with an additional option for users who need both email delivery and inbox notifications.
-                When a recipient uses this preference, the notification flow is split into separate inbox and email notifications.
-            </p>
-        </section>
-
-        <section>
-            <h2>Key Features</h2>
-            <div class="npt-grid">
-                <div class="npt-box">
-                    <strong>Email and inbox preference</strong>
-                    <p>Adds an extra user notification type for combined email and Odoo inbox handling.</p>
-                </div>
-                <div class="npt-box">
-                    <strong>Inbox notification delivery</strong>
-                    <p>Sends matching notifications through Odoo's inbox notification flow.</p>
-                </div>
-                <div class="npt-box">
-                    <strong>Email notification delivery</strong>
-                    <p>Sends matching notifications through Odoo's email notification flow.</p>
-                </div>
-                <div class="npt-box">
-                    <strong>User preference alignment</strong>
-                    <p>Keeps the inbox notification group aligned for users using either inbox or combined email and inbox notifications.</p>
+    <section>
+        <div class="container px-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <img
+                        src="banner.png"
+                        class="img-fluid w-100"
+                        alt="User notifications by email and Odoo inbox"
+                    >
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>How It Works</h2>
-            <ol>
-                <li>Install the module.</li>
-                <li>Select the combined email and inbox notification preference on an internal user.</li>
-                <li>When Odoo prepares notifications for that user, the module creates inbox delivery data and email delivery data.</li>
-                <li>Odoo then sends the notification through both supported channels.</li>
-            </ol>
-        </section>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="npt-kicker mb-2">Odoo Discuss and Mail</p>
+                    <h1 class="npt-title mb-3">User Notifications by Email and Odoo</h1>
+                    <p class="mb-0">
+                        User Notifications by Email and Odoo adds a combined notification preference for Odoo users.
+                        When selected, supported Odoo Mail notifications are delivered through both email and the Odoo inbox, helping users keep inbox visibility while still receiving email alerts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Supports users who want email notifications without losing Odoo inbox visibility.</li>
-                <li>Uses Odoo's existing mail notification mechanisms.</li>
-                <li>Adds the behavior without adding new menus or configuration screens.</li>
-            </ul>
-        </section>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Overview</h2>
+                    <p class="mb-0">
+                        This addon extends the standard user notification type selection with an additional `email_inbox` option.
+                        It preserves the inbox notification group behavior for users with this preference and splits matching notification recipients into separate inbox and email delivery flows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Screenshots</h2>
-            <p class="npt-note">
-                No product screenshots are included in this package. Add real screenshots under <strong>static/description/images/</strong> before publishing if screenshots are required for the listing.
-            </p>
-        </section>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Key Features</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="npt-feature-card">
+                        <strong>Email and inbox preference</strong>
+                        <p class="mb-0">Adds a user notification option for combined email and Odoo inbox handling.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="npt-feature-card">
+                        <strong>Inbox notification delivery</strong>
+                        <p class="mb-0">Sends matching notifications through Odoo's existing inbox notification flow.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="npt-feature-card">
+                        <strong>Email notification delivery</strong>
+                        <p class="mb-0">Sends matching notifications through Odoo's existing email notification flow.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="npt-feature-card">
+                        <strong>User preference alignment</strong>
+                        <p class="mb-0">Keeps the Odoo inbox notification group aligned for inbox and combined email plus inbox users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Compatibility</h2>
-            <ul>
-                <li>Odoo 18.0</li>
-                <li>Requires the Odoo Mail app.</li>
-            </ul>
-        </section>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">How It Works</h2>
+                    <ol class="mb-0">
+                        <li>Install the addon.</li>
+                        <li>Select the combined email and inbox notification preference on an internal user.</li>
+                        <li>When Odoo prepares notifications, recipients using this preference are identified.</li>
+                        <li>The addon sends one notification through the Odoo inbox flow.</li>
+                        <li>It also sends an email notification for the same recipient data.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="npt-publisher">
-            <h2>Support / Publisher</h2>
-            <p>
-                <strong>Next Page Technologies Pvt Ltd</strong><br>
-                <a href="https://nextpagetechnologies.com" target="_blank" rel="noopener">https://nextpagetechnologies.com</a>
-            </p>
-        </section>
-    </main>
-</body>
-</html>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Use Cases</h2>
+                    <ul class="mb-0">
+                        <li>Users who need email notifications without losing Odoo inbox visibility.</li>
+                        <li>Teams that rely on Discuss inbox notifications and external email alerts together.</li>
+                        <li>Managers who want important Odoo messages to remain visible inside Odoo while also arriving by email.</li>
+                        <li>Companies that want an additional notification preference without adding a separate configuration workflow.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Configuration / Setup</h2>
+                    <p class="mb-0">
+                        No separate configuration menu is added by this addon.
+                        After installation, administrators can select the combined email and inbox notification preference on user records.
+                        Portal or shared users are kept aligned with Odoo's standard email notification behavior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Combined Notification Preference</h2>
+                    <p>
+                        The addon adds a notification preference that keeps Odoo inbox behavior available while also allowing email delivery for supported notifications.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <img
+                        src="images/description_01.png"
+                        class="img-fluid w-100"
+                        alt="Odoo user notification preference for both email and inbox"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Email and Inbox Delivery</h2>
+                    <p>
+                        During notification processing, recipients using the combined option are copied into inbox delivery data and email delivery data so both channels are used.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <img
+                        src="images/description_02.png"
+                        class="img-fluid w-100"
+                        alt="Odoo notification delivery through email and inbox"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Business Benefits</h2>
+                    <ul class="mb-0">
+                        <li>Supports users who want both Odoo inbox notifications and email alerts.</li>
+                        <li>Uses Odoo's existing mail notification mechanisms.</li>
+                        <li>Avoids forcing users to choose only one notification channel.</li>
+                        <li>Adds the behavior without introducing new menus or a separate setup screen.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Known Scope</h2>
+                    <p class="npt-note mb-0">
+                        This addon changes Odoo Mail notification handling for users with the combined email and inbox preference. It does not add a new Discuss application screen, activity workflow, or external notification service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Requirements / Dependencies</h2>
+                    <ul class="mb-0">
+                        <li>Odoo Mail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Compatibility</h2>
+                    <ul class="mb-0">
+                        <li>Odoo 18.0</li>
+                        <li>Technical addon name: notify_email_inbox</li>
+                        <li>License: LGPL-3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 npt-publisher pt-4">
+                    <h2 class="npt-section-title mb-3">Support / Contact</h2>
+                    <p class="mb-0">
+                        <strong>Next Page Technologies Pvt Ltd</strong><br>
+                        <a href="https://nextpagetechnologies.com" target="_blank" rel="noopener">https://nextpagetechnologies.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container px-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <img
+                        src="images/contact_us.png"
+                        class="img-fluid w-100"
+                        alt="Contact Next Page Technologies Pvt Ltd for Odoo addon support"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="npt-section-title mb-3">Publisher</h2>
+                    <p class="mb-0">
+                        <strong>Next Page Technologies Pvt Ltd</strong><br>
+                        <a href="https://nextpagetechnologies.com" target="_blank" rel="noopener">https://nextpagetechnologies.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -16,4 +16,7 @@ Adds one more user notification preference that sends notifications through both
     'license': 'LGPL-3',
     'installable': True,
     'application': False,
+    'images': [
+        'static/description/banner.png',
+    ],
 }
