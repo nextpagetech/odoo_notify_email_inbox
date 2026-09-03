@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Notifications by Email and Odoo</title>
+    <style>
+        body {
+            margin: 0;
+            color: #1f2933;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+        .npt-page {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+        .npt-header {
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+        .npt-kicker {
+            margin: 0 0 8px;
+            color: #6b7280;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 0 0 12px;
+            color: #111827;
+            font-size: 34px;
+            line-height: 1.2;
+        }
+        h2 {
+            margin: 32px 0 12px;
+            color: #111827;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+        p {
+            margin: 0 0 14px;
+        }
+        ul, ol {
+            margin: 0;
+            padding-left: 22px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .npt-lead {
+            max-width: 760px;
+            color: #374151;
+            font-size: 17px;
+        }
+        .npt-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .npt-box {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 18px;
+            background: #f9fafb;
+        }
+        .npt-box strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #111827;
+        }
+        .npt-note {
+            border-left: 4px solid #6b7280;
+            padding: 12px 16px;
+            background: #f9fafb;
+            color: #374151;
+        }
+        .npt-publisher {
+            border-top: 1px solid #e5e7eb;
+            margin-top: 34px;
+            padding-top: 22px;
+        }
+        a {
+            color: #0f766e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .npt-page {
+                padding: 24px 16px 40px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .npt-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="npt-page">
+        <header class="npt-header">
+            <p class="npt-kicker">Odoo Discuss</p>
+            <h1>User Notifications by Email and Odoo</h1>
+            <p class="npt-lead">
+                Adds a user notification preference that delivers notifications through both email and the Odoo inbox.
+            </p>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                This module extends Odoo Mail notification preferences with an additional option for users who need both email delivery and inbox notifications.
+                When a recipient uses this preference, the notification flow is split into separate inbox and email notifications.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <div class="npt-grid">
+                <div class="npt-box">
+                    <strong>Email and inbox preference</strong>
+                    <p>Adds an extra user notification type for combined email and Odoo inbox handling.</p>
+                </div>
+                <div class="npt-box">
+                    <strong>Inbox notification delivery</strong>
+                    <p>Sends matching notifications through Odoo's inbox notification flow.</p>
+                </div>
+                <div class="npt-box">
+                    <strong>Email notification delivery</strong>
+                    <p>Sends matching notifications through Odoo's email notification flow.</p>
+                </div>
+                <div class="npt-box">
+                    <strong>User preference alignment</strong>
+                    <p>Keeps the inbox notification group aligned for users using either inbox or combined email and inbox notifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <ol>
+                <li>Install the module.</li>
+                <li>Select the combined email and inbox notification preference on an internal user.</li>
+                <li>When Odoo prepares notifications for that user, the module creates inbox delivery data and email delivery data.</li>
+                <li>Odoo then sends the notification through both supported channels.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Benefits</h2>
+            <ul>
+                <li>Supports users who want email notifications without losing Odoo inbox visibility.</li>
+                <li>Uses Odoo's existing mail notification mechanisms.</li>
+                <li>Adds the behavior without adding new menus or configuration screens.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Screenshots</h2>
+            <p class="npt-note">
+                No product screenshots are included in this package. Add real screenshots under <strong>static/description/images/</strong> before publishing if screenshots are required for the listing.
+            </p>
+        </section>
+
+        <section>
+            <h2>Compatibility</h2>
+            <ul>
+                <li>Odoo 18.0</li>
+                <li>Requires the Odoo Mail app.</li>
+            </ul>
+        </section>
+
+        <section class="npt-publisher">
+            <h2>Support / Publisher</h2>
+            <p>
+                <strong>Next Page Technologies Pvt Ltd</strong><br>
+                <a href="https://nextpagetechnologies.com" target="_blank" rel="noopener">https://nextpagetechnologies.com</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
